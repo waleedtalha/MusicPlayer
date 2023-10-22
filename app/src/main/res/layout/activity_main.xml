@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.MainActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_item" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/music_tabs"
+        style="@style/TabLayoutBg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/music_view_pager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:tabGravity="fill"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="auto"
+        app:tabTextAppearance="@style/TextTabMusic"
+        app:tabTextColor="@color/default_gray"
+        tools:ignore="NotSibling" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/music_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/miniPlayerFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/music_tabs" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/miniPlayerFragment"
+        android:name="com.app.musicplayer.ui.fragments.NowPlayingFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/music_view_pager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout="@layout/fragment_now_playing" />
+</androidx.constraintlayout.widget.ConstraintLayout>

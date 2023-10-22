@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/custom_equalizer_tv"
+            style="@style/AppNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginBottom="@dimen/margin_18"
+            android:text="@string/custom_equalizer"
+            app:layout_constraintBottom_toTopOf="@+id/eq_controls_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:textColor="@color/purple"
+            android:id="@+id/reset"
+            app:layout_constraintBottom_toBottomOf="@+id/custom_equalizer_tv"
+            app:layout_constraintEnd_toEndOf="@+id/done_button"
+            app:layout_constraintTop_toTopOf="@+id/custom_equalizer_tv" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/eq_controls_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/cancel_button"
+            app:layout_constraintEnd_toEndOf="@id/done_button"
+            app:layout_constraintStart_toStartOf="@id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@+id/custom_equalizer_tv">
+
+            <TextView
+                android:id="@+id/pitch_tv"
+                style="@style/AlbumNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:text="@string/pitch"
+                app:layout_constraintBottom_toTopOf="@+id/pitch_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <SeekBar
+                android:id="@+id/pitch_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:max="100"
+                android:progressDrawable="@drawable/seek_bar"
+                android:thumb="@drawable/seek_thumb"
+                app:layout_constraintBottom_toTopOf="@+id/sound_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pitch_tv" />
+
+            <TextView
+                android:id="@+id/sound_tv"
+                style="@style/AlbumNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:text="@string/sound"
+                app:layout_constraintBottom_toTopOf="@+id/sound_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pitch_bar" />
+
+            <SeekBar
+                android:id="@+id/sound_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:max="100"
+                android:progressDrawable="@drawable/seek_bar"
+                android:thumb="@drawable/seek_thumb"
+                app:layout_constraintBottom_toTopOf="@+id/base_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sound_tv" />
+
+            <TextView
+                android:id="@+id/base_tv"
+                style="@style/AlbumNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:text="@string/base"
+                app:layout_constraintBottom_toTopOf="@+id/base_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sound_bar" />
+
+            <SeekBar
+                android:id="@+id/base_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:max="100"
+                android:progressDrawable="@drawable/seek_bar"
+                android:thumb="@drawable/seek_thumb"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/base_tv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_button"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_15"
+            android:background="@drawable/buttons_bg"
+            android:backgroundTint="@color/gray"
+            android:paddingHorizontal="@dimen/padding_40"
+            android:paddingVertical="@dimen/padding_15"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eq_controls_container" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0.5dp"
+            android:layout_height="26dp"
+            android:background="@color/dirty_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/done_button"
+            app:layout_constraintStart_toEndOf="@+id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@+id/eq_controls_container" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/done_button"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttons_bg"
+            android:backgroundTint="@color/purple"
+            android:paddingHorizontal="@dimen/padding_45"
+            android:paddingVertical="@dimen/padding_15"
+            android:text="@string/apply"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider"
+            app:layout_constraintTop_toBottomOf="@+id/eq_controls_container" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

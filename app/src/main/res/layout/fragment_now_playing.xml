@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.fragments.NowPlayingFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_10">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/thumbnail_card_current"
+            android:layout_width="@dimen/height_43"
+            android:layout_height="@dimen/height_43"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_10"
+            android:backgroundTint="@android:color/transparent"
+            app:cardCornerRadius="200dp">
+
+            <ImageView
+                android:id="@+id/track_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_artist" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/track_detail_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:layout_toStartOf="@+id/previous_track_current"
+            android:layout_toEndOf="@+id/thumbnail_card_current"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/track_name_current"
+                style="@style/AlbumNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="@string/track_name" />
+
+            <TextView
+                android:id="@+id/artist_name_current"
+                style="@style/ImagesCountText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/artist_name" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/previous_track_current"
+            style="@style/PreviousIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_15"
+            android:layout_toStartOf="@+id/play_pause_current"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <ImageView
+            android:id="@+id/play_pause_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_15"
+            android:layout_toStartOf="@+id/next_track_current"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_play" />
+
+        <ImageView
+            android:id="@+id/next_track_current"
+            style="@style/NextIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+    </RelativeLayout>
+</RelativeLayout>

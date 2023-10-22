@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="album_name">Album name</string>
+    <string name="_10_songs">10 Songs</string>
+    <string name="now_playing">Now playing</string>
+    <string name="track_name">Track</string>
+    <string name="artist_name">Artist</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="playpause">PlayPause</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="access_storage_prompt">Please grant access to all your files before modifying the track.</string>
+    <string name="access_storage_from_settings">Please grant access to storage from the settings.</string>
+    <string name="no_audio_files_detected">No media files detected.</string>
+    <string name="search_here">Search Here</string>
+    <string name="all_songs">All Songs</string>
+    <string name="albums">Albums</string>
+    <string name="artists">Artists</string>
+    <string name="recently_played">Recently Played</string>
+    <string name="my_favorites">My Favorites</string>
+    <string name="playlists">Playlists</string>
+    <string name="create_playlist">Create playlist</string>
+    <string name="create">Create</string>
+    <string name="add_favorites">Added to Favorites</string>
+    <string name="add_playlist">Add to Playlist</string>
+    <string name="add">Add</string>
+    <string name="remove_favorites">Removed from Favorites</string>
+    <string name="set_as">Set as</string>
+    <string name="select_time">Stop Player at regular intervals</string>
+    <string name="select_play_speed">Select Playback Speed</string>
+    <string name="custom_equalizer">Custom equalizer</string>
+    <string name="pitch">Pitch</string>
+    <string name="sound">Sound</string>
+    <string name="base">Base</string>
+    <string name="slow2">0.5x</string>
+    <string name="slow1">0.75x</string>
+    <string name="normal">1x (Normal)</string>
+    <string name="fast1">1.25x</string>
+    <string name="fast2">1.5x</string>
+    <string name="fast3">2x</string>
+    <string name="rename_track">Rename Track</string>
+    <string name="phone_ringtone">Phone Ringtone</string>
+    <string name="alarm_tone">Alarm tone</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
+    <string name="apply">Apply</string>
+    <string name="set_timer">Set Timer</string>
+    <string name="rename">Rename</string>
+    <string name="set_ringtone">Set Ringtone</string>
+    <string name="dialog_message_set_ringtone">Allow Music Player to modify audio settings</string>
+    <string name="x_has_been_set_as_ringtone">Set %1$s as your ringtone.</string>
+    <string name="x_has_been_set_as_alarm_tone">Set %1$s as your Alarm Tone.</string>
+    <string name="music_settings">Music Settings</string>
+    <string name="ab_repeat_function">AB Repeat Function</string>
+    <string name="eq_sound_style">EQ Sound Style</string>
+    <string name="variable_speed_playback">Variable Speed Playback</string>
+    <string name="stop_playing_at_regular_intervals">Stop Playing at regular Intervals</string>
+    <string name="enter_the_name">Enter the name</string>
+    <string name="title_activity_playlist_details">PlaylistDetailsActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+</resources>

@@ -1,0 +1,125 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MusicPlayer" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/black</item>
+        <!-- set default font-->
+        <item name="android:textViewStyle">@style/PoppinsFont</item>
+    </style>
+
+    <style name="PoppinsFont" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="AppNameText">
+        <item name="android:textSize">@dimen/text_size_20</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="NormalText">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="AlbumNameText">
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ImagesCountText">
+        <item name="android:textSize">@dimen/text_size_13</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextTabMusic">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="TabLayoutBg">
+        <item name="tabSelectedTextColor">@color/white</item>
+    </style>
+
+    <style name="CurrentTrackBg">
+        <item name="background">@color/black</item>
+    </style>
+
+    <style name="BackIcon">
+        <item name="android:src">@drawable/ic_back_white</item>
+    </style>
+
+    <style name="MenuIcon">
+        <item name="android:src">@drawable/ic_menu_white</item>
+    </style>
+
+    <style name="SimpleMenuIcon">
+        <item name="android:src">@drawable/ic_menu_more</item>
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name="FavouriteIcon">
+        <item name="android:src">@drawable/ic_favorite_border_white</item>
+    </style>
+
+    <style name="AddIcon">
+        <item name="android:src">@drawable/ic_add_white</item>
+    </style>
+
+    <style name="ShuffleIcon">
+        <item name="android:src">@drawable/ic_shuffle_white</item>
+    </style>
+
+    <style name="PreviousIcon">
+        <item name="android:src">@drawable/ic_previous_white</item>
+    </style>
+
+    <style name="NextIcon">
+        <item name="android:src">@drawable/ic_next_white</item>
+    </style>
+
+    <style name="RefreshIcon">
+        <item name="android:src">@drawable/ic_repeat_white</item>
+    </style>
+
+    <style name="ContentTextBlack" parent="">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <!-- bottom sheet style-->
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottomsheet_bg_dark</item>
+    </style>
+
+    <!--    popup theme-->
+    <style name="popUpMenuMain" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="popupMenuBackground">@drawable/rounded_menus_dark</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:dropDownHorizontalOffset">-4dp</item>
+        <item name="android:dropDownVerticalOffset">4dp</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MusicPlayer" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+</resources>

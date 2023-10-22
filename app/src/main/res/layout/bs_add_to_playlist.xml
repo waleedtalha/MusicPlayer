@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/bs_title"
+            style="@style/AppNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginBottom="@dimen/margin_18"
+            android:text="@string/add_playlist"
+            app:layout_constraintBottom_toTopOf="@+id/playlistRv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/create_playlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="@+id/bs_title"
+            app:layout_constraintEnd_toEndOf="@+id/add_button"
+            app:layout_constraintTop_toTopOf="@+id/bs_title"
+            app:tint="@color/purple" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/playlistRv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:padding="@dimen/padding_5"
+            app:layout_constraintBottom_toTopOf="@+id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@+id/bs_title" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_button"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_15"
+            android:background="@drawable/buttons_bg"
+            android:backgroundTint="@color/gray"
+            android:paddingHorizontal="@dimen/padding_40"
+            android:paddingVertical="@dimen/padding_15"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playlistRv" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0.5dp"
+            android:layout_height="26dp"
+            android:background="@color/dirty_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/add_button"
+            app:layout_constraintStart_toEndOf="@+id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@+id/playlistRv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_button"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttons_bg"
+            android:backgroundTint="@color/purple"
+            android:paddingHorizontal="@dimen/padding_45"
+            android:paddingVertical="@dimen/padding_15"
+            android:text="  Add  "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider"
+            app:layout_constraintTop_toBottomOf="@+id/playlistRv" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

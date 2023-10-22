@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/list_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_7"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/margin_5"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_music"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/track_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+        <TextView
+            android:id="@+id/track_name"
+            style="@style/AlbumNameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/track_name"
+            app:layout_constraintBottom_toTopOf="@+id/artist_name"
+            app:layout_constraintEnd_toStartOf="@+id/menu_track"
+            app:layout_constraintStart_toEndOf="@+id/thumbnail"
+            app:layout_constraintTop_toTopOf="@id/thumbnail" />
+
+        <TextView
+            android:id="@+id/artist_name"
+            style="@style/ImagesCountText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20"
+            android:text="@string/artist_name"
+            app:layout_constraintBottom_toBottomOf="@id/thumbnail"
+            app:layout_constraintEnd_toStartOf="@+id/menu_track"
+            app:layout_constraintStart_toEndOf="@id/thumbnail"
+            app:layout_constraintTop_toBottomOf="@+id/track_name" />
+
+        <ImageView
+            android:id="@+id/menu_track"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/padding_5"
+            android:src="@drawable/ic_menu_more"
+            app:layout_constraintBottom_toBottomOf="@id/thumbnail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/track_name"
+            app:layout_constraintTop_toTopOf="@id/thumbnail" />
+
+        <RadioButton
+            android:id="@+id/select_track"
+            app:layout_constraintBottom_toBottomOf="@id/thumbnail"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@+id/track_name"
+            app:layout_constraintTop_toTopOf="@id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <ImageView
+            android:id="@+id/favorite_track"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/padding_5"
+            android:src="@drawable/ic_favorite"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/thumbnail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/track_name"
+            app:layout_constraintTop_toTopOf="@id/thumbnail" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

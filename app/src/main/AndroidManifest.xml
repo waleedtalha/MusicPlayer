@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_new"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_new_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MusicPlayer"
+        android:usesCleartextTraffic="true"
+        tools:ignore="HardcodedDebugMode"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.activities.PlaylistDetailsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_playlist_details"
+            android:theme="@style/Theme.MusicPlayer" />
+        <activity
+            android:name=".ui.activities.ArtistDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.AlbumDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.base.BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.MusicPlayerActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service
+            android:name=".services.MusicService"
+            android:exported="true"
+            android:foregroundServiceType="mediaPlayback">
+            <intent-filter>
+                <action android:name="com.app.musicplayer.action.INIT" />
+                <action android:name="com.app.musicplayer.action.INIT_PATH" />
+                <action android:name="com.app.musicplayer.action.PREVIOUS" />
+                <action android:name="com.app.musicplayer.action.PAUSE" />
+                <action android:name="com.app.musicplayer.action.PLAYPAUSE" />
+                <action android:name="com.app.musicplayer.action.NEXT" />
+                <action android:name="com.app.musicplayer.action.FINISH_IF_NOT_PLAYING" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".receivers.ControlActionsListener"
+            android:exported="false" />
+        <receiver
+            android:name=".receivers.NotificationDismissedReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.app.musicplayer.action.NOTIFICATION_DISMISSED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path_provider" />
+        </provider>
+    </application>
+
+</manifest>

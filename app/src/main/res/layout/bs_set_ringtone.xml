@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/sort_by_tv"
+            style="@style/AppNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginBottom="@dimen/margin_18"
+            android:text="@string/set_as"
+            app:layout_constraintBottom_toTopOf="@+id/set_ringtone_group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/set_ringtone_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/cancel_button"
+            app:layout_constraintEnd_toEndOf="@id/done_button"
+            app:layout_constraintStart_toStartOf="@id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@+id/sort_by_tv">
+
+            <RadioButton
+                android:id="@+id/phone_ringtone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:buttonTint="@color/purple"
+                android:text="@string/phone_ringtone"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/alarm_tone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple"
+                android:text="@string/alarm_tone"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_button"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_15"
+            android:background="@drawable/buttons_bg"
+            android:backgroundTint="@color/gray"
+            android:paddingHorizontal="@dimen/padding_40"
+            android:paddingVertical="@dimen/padding_15"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set_ringtone_group" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0.5dp"
+            android:layout_height="26dp"
+            android:background="@color/dirty_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/done_button"
+            app:layout_constraintStart_toEndOf="@+id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@+id/set_ringtone_group" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/done_button"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttons_bg"
+            android:backgroundTint="@color/purple"
+            android:paddingHorizontal="@dimen/padding_45"
+            android:paddingVertical="@dimen/padding_15"
+            android:text="@string/done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider"
+            app:layout_constraintTop_toBottomOf="@+id/set_ringtone_group" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

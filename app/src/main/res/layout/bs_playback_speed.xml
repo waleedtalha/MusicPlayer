@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/sheet_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/sort_by_tv"
+            style="@style/AppNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginBottom="@dimen/margin_18"
+            android:text="@string/select_play_speed"
+            app:layout_constraintBottom_toTopOf="@+id/play_speed_group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/play_speed_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/cancel_button"
+            app:layout_constraintEnd_toEndOf="@id/done_button"
+            app:layout_constraintStart_toStartOf="@id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@+id/sort_by_tv">
+
+            <RadioButton
+                android:id="@+id/slow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple"
+                android:text="@string/slow2"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/slow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple"
+                android:text="@string/slow1"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple"
+                android:checked="true"
+                android:text="@string/normal"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/fast1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple"
+                android:text="@string/fast1"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/fast2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple"
+                android:text="@string/fast2"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/fast3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/purple"
+                android:text="@string/fast3"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_button"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_15"
+            android:background="@drawable/buttons_bg"
+            android:backgroundTint="@color/gray"
+            android:paddingHorizontal="@dimen/padding_40"
+            android:paddingVertical="@dimen/padding_15"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/play_speed_group" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0.5dp"
+            android:layout_height="26dp"
+            android:background="@color/dirty_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/done_button"
+            app:layout_constraintStart_toEndOf="@+id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@+id/play_speed_group" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/done_button"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttons_bg"
+            android:backgroundTint="@color/purple"
+            android:paddingHorizontal="@dimen/padding_45"
+            android:paddingVertical="@dimen/padding_15"
+            android:text="@string/done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider"
+            app:layout_constraintTop_toBottomOf="@+id/play_speed_group" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
