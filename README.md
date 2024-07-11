@@ -39,9 +39,11 @@ Getting Started
 3. Build and run the project on an emulator or device.
 
 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+
+This project is licensed under The GNU General Public License v3 - see the [LICENSE.md](LICENSE.md) file for details
 
 Contributions
+
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
 ScreenShots:
