@@ -40,15 +40,15 @@ Getting Started
 
 # ScreenShots
 <p align="start">
-  <img src="https://github.com/user-attachments/assets/41e904b4-2c57-458c-889a-911ec517d84a" width="300">
-  <img src="https://github.com/user-attachments/assets/b2cb0111-3946-453b-802d-dc38c8552bec" width="300">
-  <img src="https://github.com/user-attachments/assets/e5eaeedd-43de-44b5-8d13-c6b8d814ff99" width="300">
+  <img src="https://github.com/user-attachments/assets/41e904b4-2c57-458c-889a-911ec517d84a" width="200">
+  <img src="https://github.com/user-attachments/assets/b2cb0111-3946-453b-802d-dc38c8552bec" width="200">
+  <img src="https://github.com/user-attachments/assets/e5eaeedd-43de-44b5-8d13-c6b8d814ff99" width="200">
 </p>
 
 <p align="start">
-  <img src="https://github.com/user-attachments/assets/85c674ef-418c-416e-b4b7-07209b270749" width="300">
-  <img src="https://github.com/user-attachments/assets/ad45967e-5f5d-45f0-afb8-d4b9005b9e6b" width="300">
-  <img src="https://github.com/user-attachments/assets/89b53497-0d8f-4bde-8d14-e1c194157641" width="300">
+  <img src="https://github.com/user-attachments/assets/85c674ef-418c-416e-b4b7-07209b270749" width="200">
+  <img src="https://github.com/user-attachments/assets/ad45967e-5f5d-45f0-afb8-d4b9005b9e6b" width="200">
+  <img src="https://github.com/user-attachments/assets/89b53497-0d8f-4bde-8d14-e1c194157641" width="200">
 </p>
 
 License
